@@ -222,6 +222,7 @@ object Settings {
         case "releases" =>  Some("releases" at s"https://${sys.env("ARTIFACTORY_HOST")}/artifactory/ext-release-local") // Some("releases"  at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
       }
     ),
+    credentials += Credentials("Artifactory Realm", sys.env("ARTIFACTORY_HOST"), sys.env("ARTIFACTORY_USER"), sys.env("ARTIFACTORY_PASSWORD")),
     publishMavenStyle := true,
     publishArtifact in Test := false,
     pomIncludeRepository := { _ => false },
