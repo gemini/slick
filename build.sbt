@@ -2,7 +2,7 @@ import Settings._
 import Docs.docDir
 import BuildUtils._
 
-version in ThisBuild := "3.3.1-SNAPSHOT"
+version in ThisBuild := "3.3.2-GEMINI"
 
 binaryCompatSlickVersion in ThisBuild := {
   if (scalaBinaryVersion.value.startsWith("2.13")) None else Some("3.3.0")
